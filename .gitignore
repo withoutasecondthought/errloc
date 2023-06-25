@@ -1,0 +1,13 @@
+#enviroment variables
+.env
+
+#test directories
+**sandbox**
+
+#linterfile˚
+universal.golangci.yml
+
+#idea
+.idea
+
+
