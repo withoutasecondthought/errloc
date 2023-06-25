@@ -1,11 +1,7 @@
 # ERRLOC
 
----
-
 ## In SHORT 
 small lib to add error location in your application
-
----
 
 ## why choose it
 
@@ -14,8 +10,6 @@ small lib to add error location in your application
 * less errors
 * standardized output
 * std lib compatibility
-
----
 
 ## Examples:
 
@@ -46,11 +40,12 @@ func(r *Repository) GetUsers(...) ([]User, error) {
     users/repository Repository.GetUsers(): cannot get users: some error
 
 ---
+
 ### `AppendLoc(currentPackage string, handlingError error) error`
 #### Example:
 ```go
 func(s *Service) GetUsers(...) ([]User, error) {
-	users, err := r.db.Get(...)
+	users, err := s.repo.GetUsers(...)
 	if err != nil {
 		return []Users{}, errloc.AppendLoc("accounts", err)
 	}
