@@ -37,7 +37,7 @@ func AddLoc(currentPackage string, handlingError error) error {
 // Example
 //
 //		func(s *Service) GetUsers(...) ([]User, error) {
-//			users, err := r.db.Get(...)
+//			users, err := s.repo.GetUsers(...)
 //			if err != nil {
 //				return []Users{}, errloc.AppendLoc("accounts", err)
 //			}
